@@ -1,0 +1,158 @@
+@import './colors';
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 62.5%;
+}
+
+.img {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.5em;
+}
+.card-title {
+	font-size: 2rem;
+	margin-bottom: 0.5em;
+	color: $very_dark_blue;
+}
+.card-text {
+	font-size: 1.5rem;
+	color: $garyish_blue;
+	font-weight: 200;
+}
+.header {
+	text-align: center;
+	&__title {
+		font-size: 2.5rem;
+		&--one {
+			padding: 1em 0.5em 0.5em;
+			font-weight: 200;
+		}
+		&--dark {
+			display: block;
+			padding: 0 0.5em;
+			font-size: 2rem;
+		}
+	}
+	&__text {
+		display: inline-block;
+		max-width: 550px;
+		font-size: 1.5rem;
+		padding: 1em;
+		font-weight: 400;
+		color: $garyish_blue;
+	}
+}
+.cards {
+	max-width: 1200px;
+	margin: 0 auto;
+	&__box {
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		margin: 0 2em;
+		gap: 1em;
+	}
+	&__card {
+		padding: 2em;
+		font-weight: 200;
+		border-radius: 8px;
+		box-shadow: 0px 5px 10px $garyish_blue;
+		border-top: 4px solid;
+		&--one {
+			border-color: $cyan;
+		}
+		&--two {
+			border-color: $red;
+		}
+		&--three {
+			border-color: $orange;
+		}
+		&--four {
+			border-color: $blue;
+		}
+	}
+}
+
+.footer {
+	text-align: center;
+	padding: 2em;
+}
+
+@media (min-width: 500px) {
+	.cards {
+		&__box {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5em;
+		}
+		&__card {
+			&--one {
+				grid-column: 1/2;
+				grid-row: 1/2;
+			}
+			&--two {
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+			&--three {
+				grid-column: 1/2;
+				grid-row: 2/3;
+			}
+			&--four {
+				grid-column: 2/3;
+				grid-row: 2/3;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.cards {
+		&__box {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas:
+				'supervisor team calculator'
+				'supervisor karma calculator';
+			gap: 2em;
+		}
+		&__card {
+			&--one {
+				grid-area: supervisor;
+				align-self: center;
+			}
+			&--two {
+				grid-area: team;
+			}
+			&--three {
+				grid-area: karma;
+			}
+			&--four {
+				grid-area: calculator;
+				align-self: center;
+			}
+		}
+	}
+	.header {
+		&__title {
+			&--one {
+				font-size: 3.5rem;
+				padding: 0.7em 0.5em 0em;
+				font-weight: 200;
+			}
+			&--dark {
+				font-size: 3.5rem;
+				padding: 0 0.5em;
+			}
+		}
+	}
+}
