@@ -62,7 +62,6 @@ I am going to practice more in order to enhance my abilities in HTML and CSS. Ce
 
 ## Author
 
-- Website - [maciejsmieja](https://www.your-site.com)
 - Frontend Mentor - [@Macstork](https://www.frontendmentor.io/profile/Macstork)
 <!-- - Twitter - [@yourusername](https://www.twitter.com/yourusername)/ -->
 
